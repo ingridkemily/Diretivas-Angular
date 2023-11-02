@@ -1,0 +1,11 @@
+<h1>Lista de Tarefas</h1>
+
+<ul>
+    <li *ngFor="let tarefa of tarefas">
+      <span [ngStyle]="{'text-decoration': tarefa.concluida ? 'line-through' : 'none'}">
+        {{ tarefa.descricao }} - {{ tarefa.concluida ? 'Concluida' : 'Pendente' }}
+      </span>
+      <button (click)="toggleConcluida(tarefa)">Check</button>
+    </li>
+  </ul>
+  
